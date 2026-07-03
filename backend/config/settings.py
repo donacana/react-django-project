@@ -93,14 +93,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mydb",          # 데이터베이스 이름
-        "USER": "kogo",      # PostgreSQL 사용자
-        "PASSWORD": "math1106",      # PostgreSQL 비밀번호
-        "HOST": "localhost",     # 또는 서버 IP
-        "PORT": "5432",
+        "NAME": os.getenv("DB_NAME", "mydb"),
+        "USER": os.getenv("DB_USER", "tndka"),
+        "PASSWORD": os.getenv("DB_PASSWORD", "qwert12345"),
+        "HOST": os.getenv("DB_HOST", "postgres"),
+        "PORT": os.getenv("DB_PORT", "5432"),
     }
 }
-
 
 
 

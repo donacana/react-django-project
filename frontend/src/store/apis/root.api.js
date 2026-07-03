@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const rootApi = axios.create({
     // 배포 환경에서는 Nginx가 /api 요청을 Django로 넘김
-    baseURL: "/api",
+    baseURL: "/api/",
 });
 
 rootApi.interceptors.request.use(

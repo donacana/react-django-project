@@ -7,7 +7,6 @@ volumes:
 services:
   postgres:
     image: postgres:16
-    container_name: postgres
     restart: always
     environment:
       POSTGRES_DB: mydb
@@ -21,7 +20,6 @@ services:
   frontend:
     build:
       context: ./frontend
-    container_name: frontend
     volumes:
       - react-dist:/dist
     command: >
@@ -34,7 +32,6 @@ services:
   backend:
     build:
       context: ./backend
-    container_name: backend
     restart: always
     ports:
       - "8000:8000"
@@ -56,7 +53,6 @@ services:
   nginx:
     build:
       context: ./nginx
-    container_name: nginx
     restart: always
     ports:
       - "80:80"

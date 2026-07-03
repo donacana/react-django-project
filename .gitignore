@@ -1,0 +1,86 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Python / Django
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+.venv/
+venv/
+env/
+
+*.log
+logs/
+
+# Django static / media
+backend/staticfiles/
+backend/media/
+
+# =========================
+# Environment
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Node / React / Vite
+# =========================
+node_modules/
+frontend/node_modules/
+
+dist/
+frontend/dist/
+
+build/
+frontend/build/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Docker
+# =========================
+.docker/
+docker-compose.override.yml
+
+# =========================
+# Jenkins
+# =========================
+jenkins_home/
+
+# =========================
+# PostgreSQL / DB volume
+# =========================
+postgres_data/
+pgdata/
+*.dump
+*.sql
+
+# =========================
+# Cache
+# =========================
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.tmp
+*.swp
